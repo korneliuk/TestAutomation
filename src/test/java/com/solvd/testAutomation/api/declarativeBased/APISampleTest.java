@@ -37,4 +37,12 @@ public class APISampleTest {
         method.callAPI();
         method.validateResponse(JSONCompareMode.LENIENT);
     }
+
+    @Test
+    public void testDeleteSomething() {
+        DeleteTemplate deleteTemplate = TemplateFactory.prepareTemplate(DeleteTemplate.class);
+        var method = deleteTemplate.deleteSomething();
+        method.callAPI();
+        method.validateResponse(JSONCompareMode.LENIENT);
+    }
 }

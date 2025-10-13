@@ -8,10 +8,10 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 @EndpointTemplate(url = "https://httpbin.org")
 public interface DeleteTemplate {
 
-    @DeleteMethod(url = "/${id}")
+    @DeleteMethod(url = "/delete")
     @RequestTemplatePath(path = "api/_delete/rq.json")
     @ResponseTemplatePath(path = "api/_delete/rs.json")
     @PropertiesPath(path = "api/user.properties")
     @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-    AbstractApiMethodV2 deleteById(@PathParam(key = "id") String id);
+    AbstractApiMethodV2 deleteSomething();
 }
