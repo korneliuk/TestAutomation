@@ -1,0 +1,8 @@
+{
+  "json": {
+    "name": "${name}",
+    "age": "${age}",
+    "company_name": "${company_name}"
+  },
+  "url": "https://httpbin.org/patch"
+}

@@ -1,0 +1,7 @@
+{
+  "json": {
+    "name": "${name}",
+    "job": "${job}"
+  },
+  "url": "https://httpbin.org/put"
+}
