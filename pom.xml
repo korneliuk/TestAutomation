@@ -159,9 +159,10 @@
                 <configuration>
                     <argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
-<!--                    <suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/gui/desktop/testing-gui.xml</suiteXmlFile>
 <!--                        <suiteXmlFile>${project.build.directory}/test-classes/testng_suites/${suite}.xml</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
