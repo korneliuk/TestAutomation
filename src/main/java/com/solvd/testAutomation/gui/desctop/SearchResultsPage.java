@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchResultsPage extends SearchResultsPageBase {
 
-    @FindBy(xpath = "(//article//h2)[1]")
+    @FindBy(xpath = "//h2[contains(@class, 'ResultArticle_articleContainer__headerLink___pap7')]")
     private ExtendedWebElement firstResult;
 
     public SearchResultsPage(WebDriver driver) {

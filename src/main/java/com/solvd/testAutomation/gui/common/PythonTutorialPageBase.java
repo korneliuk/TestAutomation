@@ -7,6 +7,4 @@ public abstract class PythonTutorialPageBase extends AbstractPage {
     public PythonTutorialPageBase(WebDriver driver) {
         super(driver);
     }
-
-
 }

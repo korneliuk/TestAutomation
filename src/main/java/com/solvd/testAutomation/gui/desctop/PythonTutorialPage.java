@@ -13,9 +13,4 @@ public class PythonTutorialPage extends PythonTutorialPageBase {
     public PythonTutorialPage(WebDriver driver) {
         super(driver);
     }
-
-//    @Override
-//    public boolean isPageOpened() {
-//        return pageHeader.isElementPresent();
-//    }
 }

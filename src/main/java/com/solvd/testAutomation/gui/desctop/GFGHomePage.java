@@ -1,6 +1,8 @@
 package com.solvd.testAutomation.gui.desctop;
 
 import com.solvd.testAutomation.gui.common.GFGHomePageBase;
+import com.solvd.testAutomation.gui.components.HeaderMain;
+import com.solvd.testAutomation.gui.components.HeaderMainBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.WebDriver;
@@ -9,51 +11,38 @@ import org.openqa.selenium.support.FindBy;
 @DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = GFGHomePageBase.class)
 public class GFGHomePage extends GFGHomePageBase {
 
-    @FindBy(xpath = "//*[@id=\"topMainHeader\"]/div/div[1]/a/div/img")
-    private ExtendedWebElement logo;
+    @FindBy(xpath = "//div[contains(@class, 'root gfg_header__root')]")
+    private HeaderMain header;
 
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[2]/div[1]/div[2]/input")
+    @FindBy(xpath = "//input[contains(@class, 'HomePageSearchContainer_homePageSearchContainer_container_input__1LS0r')]")
     private ExtendedWebElement searchBar;
 
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[2]/div[1]/div[2]/span")
+    @FindBy(xpath = "//span[contains(@class, 'HomePageSearchContainer_homePageSearchContainer_container--icon__6FDkO')]")
     private ExtendedWebElement findButton;
 
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[2]/div[2]/div/div[2]/a[1]")
+    @FindBy(xpath = "//button[contains(@class, 'HomePageArticleCard_homePageArticleCard--cta__CUjXy')]")
     private ExtendedWebElement dataStructureTopicLink;
 
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[3]/footer/div[1]/div[1]/div[5]/a")
+    @FindBy(xpath = "//a[contains(@class, 'footer_advertise_btn')]")
     private ExtendedWebElement advertiseWithUsLink;
 
-    @FindBy(xpath = "//*[@id=\"topMainHeader\"]/div/div[2]/div[2]/button")
-    private ExtendedWebElement signInButton;
-
-    @FindBy(xpath = "//*[@id=\"login\"]/div/div[2]/div/div[1]/h1")
-    private ExtendedWebElement LogInHeading;
-
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[2]/div[5]/div[2]/a[1]")
+    @FindBy(xpath = "//a[contains(@class, 'HomePageTopicCard_homePageTopicCard__eePhS row1 ')]")
     private ExtendedWebElement trendingNowLink;
 
-    @FindBy(xpath = "//*[@id=\"comp\"]/div[3]/footer/div[1]/div[1]/div[3]/a[1]/div")
+    @FindBy(xpath = "//div[contains(@class, 'socialIcon facebook')]")
     private ExtendedWebElement facebookLink;
 
-    @FindBy(xpath = "//*[@id=\"topMainHeader\"]/div/ul/li[1]/span/div")
-    private ExtendedWebElement tutorialsDropDownMenu;
-
-    @FindBy(xpath = "//a[contains(@href, '/python-programming-language/')]")
-    private ExtendedWebElement pythonTutorialsLink;
+    @FindBy(xpath = "//body")
+    private ExtendedWebElement body;
 
     public GFGHomePage(WebDriver driver) {
         super(driver);
     }
 
-    public ExtendedWebElement getLogo() {
-        return logo;
-    }
-
     @Override
     public void searchBySearchBar(String text) {
         searchBar.click();
-        searchBar.type(text + "\n");
+        searchBar.type(text + '\n');
     }
 
     @Override
@@ -67,16 +56,6 @@ public class GFGHomePage extends GFGHomePageBase {
     }
 
     @Override
-    public void clickSignIn() {
-        signInButton.click();
-    }
-
-    @Override
-    public ExtendedWebElement getLogInHeading() {
-        return LogInHeading;
-    }
-
-    @Override
     public void goToTrendingNowPage() {
         trendingNowLink.click();
     }
@@ -87,9 +66,12 @@ public class GFGHomePage extends GFGHomePageBase {
     }
 
     @Override
-    public void goToPythonTutorialsPage() {
-        tutorialsDropDownMenu.scrollTo();
-        pause(3);
-        pythonTutorialsLink.click();
+    public HeaderMainBase getHeader() {
+        return header;
+    }
+
+    @Override
+    public ExtendedWebElement getBody() {
+        return body;
     }
 }
