@@ -1,4 +1,4 @@
-package com.solvd.testAutomation.gui.desctop;
+package com.solvd.testAutomation.gui.desktop;
 
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.utils.R;

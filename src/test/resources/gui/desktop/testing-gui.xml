@@ -3,7 +3,7 @@
 
     <test name="Web GUI Test">
         <classes>
-            <class name="com.solvd.testAutomation.gui.desctop.GFGPageTest"/>
+            <class name="com.solvd.testAutomation.gui.desktop.GFGPageTest"/>
         </classes>
     </test>
 </suite>

@@ -1,6 +1,7 @@
-package com.solvd.testAutomation.gui.desctop;
+package com.solvd.testAutomation.gui.desktop;
 
 import com.solvd.testAutomation.gui.common.GFGHomePageBase;
+import com.solvd.testAutomation.gui.desctop.GFGHomePage;
 import com.zebrunner.carina.core.IAbstractTest;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
