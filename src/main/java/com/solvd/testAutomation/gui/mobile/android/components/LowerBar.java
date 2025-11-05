@@ -9,22 +9,22 @@ import org.openqa.selenium.support.FindBy;
 public class LowerBar extends LowerBarBase {
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Home\"]")
-    ExtendedWebElement home;
+    private ExtendedWebElement home;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Webview\"]")
-    ExtendedWebElement webview;
+    private ExtendedWebElement webview;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Login\"]")
-    ExtendedWebElement login;
+    private ExtendedWebElement login;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Forms\"]")
-    ExtendedWebElement forms;
+    private ExtendedWebElement forms;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Swipe\"]")
-    ExtendedWebElement swipe;
+    private ExtendedWebElement swipe;
 
     @FindBy(xpath = "//android.view.View[@content-desc=\"Drag\"]")
-    ExtendedWebElement drag;
+    private ExtendedWebElement drag;
 
     public LowerBar(WebDriver driver, SearchContext context) {
         super(driver, context);

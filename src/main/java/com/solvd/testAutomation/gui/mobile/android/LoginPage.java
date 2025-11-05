@@ -10,31 +10,31 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends LoginPageBase {
 
     @FindBy(xpath = "//android.widget.EditText[@content-desc=\"input-email\"]")
-    ExtendedWebElement emailInputField;
+    private ExtendedWebElement emailInputField;
 
     @FindBy(xpath = "//android.widget.EditText[@content-desc=\"input-password\"]")
-    ExtendedWebElement passwordInputField;
+    private ExtendedWebElement passwordInputField;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc='button-LOGIN']/android.view.ViewGroup")
-    ExtendedWebElement loginButton;
+    private ExtendedWebElement loginButton;
 
     @FindBy(xpath = "//android.widget.TextView[@resource-id='android:id/alertTitle']")
-    ExtendedWebElement successWarningTitle;
+    private ExtendedWebElement successWarningTitle;
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"\uDB80\uDF42\"]")
-    ExtendedWebElement loginPage;
+    private ExtendedWebElement loginPage;
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"Please enter a valid email address\"]")
-    ExtendedWebElement hintMessage;
+    private ExtendedWebElement hintMessage;
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"Sign up\"]")
-    ExtendedWebElement signupTab;
+    private ExtendedWebElement signupTab;
 
     @FindBy(xpath = "//android.widget.EditText[@content-desc=\"input-repeat-password\"]")
-    ExtendedWebElement confirmPasswordField;
+    private ExtendedWebElement confirmPasswordField;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"button-SIGN UP\"]/android.view.ViewGroup")
-    ExtendedWebElement signupButton;
+    private ExtendedWebElement signupButton;
 
     public LoginPage(WebDriver driver) {
         super(driver);

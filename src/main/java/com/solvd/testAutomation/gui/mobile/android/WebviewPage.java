@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class WebviewPage extends WebviewPageBase {
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"Next-gen browser and mobile automation test framework for Node.js\"]")
-    ExtendedWebElement title;
+    private ExtendedWebElement title;
 
     public WebviewPage(WebDriver driver) {
         super(driver);

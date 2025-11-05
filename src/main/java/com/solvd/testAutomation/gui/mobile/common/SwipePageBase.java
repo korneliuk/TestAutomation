@@ -11,4 +11,6 @@ public abstract class SwipePageBase extends BasePage {
 
     public abstract void clickSwipeTab();
     public abstract ExtendedWebElement getTitleMessage();
+    public abstract ExtendedWebElement getSecretMessageContainer();
+    public abstract ExtendedWebElement getSecretMessage();
 }

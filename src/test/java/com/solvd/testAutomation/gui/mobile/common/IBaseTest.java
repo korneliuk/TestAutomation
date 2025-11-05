@@ -1,16 +1,16 @@
 package com.solvd.testAutomation.gui.mobile.common;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import io.appium.java_client.MobileBy;
+import com.zebrunner.carina.utils.android.IAndroidUtils;
+import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public interface IBaseTest extends IAbstractTest {
+public interface IBaseTest extends IAbstractTest, IMobileUtils {
 
     default String getElementText(By locator) {
         return waitForElement(locator).getText();
@@ -18,12 +18,5 @@ public interface IBaseTest extends IAbstractTest {
 
     default WebElement waitForElement(By locator) {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    default void scrollToText(String text) {
-        getDriver().findElement(MobileBy.AndroidUIAutomator(
-                "new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().text(\"" + text + "\"))"
-        ));
     }
 }

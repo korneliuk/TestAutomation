@@ -10,7 +10,13 @@ import org.openqa.selenium.support.FindBy;
 public class SwipePage extends SwipePageBase {
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"Swipe horizontal\"]")
-    ExtendedWebElement title;
+    private ExtendedWebElement title;
+
+    @FindBy(xpath = "//android.widget.ScrollView[@content-desc=\"Swipe-screen\"]/android.view.ViewGroup")
+    private ExtendedWebElement secretMessageContainer;
+
+    @FindBy(xpath = "//android.widget.TextView[@text=\"You found me!!!\"]")
+    private ExtendedWebElement secretMessage;
 
     public SwipePage(WebDriver driver) {
         super(driver);
@@ -24,5 +30,15 @@ public class SwipePage extends SwipePageBase {
     @Override
     public ExtendedWebElement getTitleMessage() {
         return title;
+    }
+
+    @Override
+    public ExtendedWebElement getSecretMessageContainer() {
+        return secretMessageContainer;
+    }
+
+    @Override
+    public ExtendedWebElement getSecretMessage() {
+        return secretMessage;
     }
 }

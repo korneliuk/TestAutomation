@@ -10,22 +10,22 @@ import org.openqa.selenium.support.FindBy;
 public class FormsPage extends FormsPageBase {
 
     @FindBy(xpath = "//android.widget.EditText[@content-desc=\"text-input\"]")
-    ExtendedWebElement inputField;
+    private ExtendedWebElement inputField;
 
     @FindBy(xpath = "//android.widget.TextView[@content-desc=\"input-text-result\"]")
-    ExtendedWebElement inputTextResult;
+    private ExtendedWebElement inputTextResult;
 
     @FindBy(xpath = "//android.widget.Switch[@content-desc=\"switch\"]")
-    ExtendedWebElement toggle;
+    private ExtendedWebElement toggle;
 
     @FindBy(xpath = "//android.widget.EditText[@resource-id=\"text_input\"]")
-    ExtendedWebElement dropdownField;
+    private ExtendedWebElement dropdownField;
 
     @FindBy(xpath = "//android.widget.CheckedTextView[@resource-id=\"android:id/text1\" and @text=\"Appium is awesome\"]")
-    ExtendedWebElement option;
+    private ExtendedWebElement option;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"button-Active\"]/android.view.ViewGroup")
-    ExtendedWebElement activeButton;
+    private ExtendedWebElement activeButton;
 
     public FormsPage(WebDriver driver) {
         super(driver);

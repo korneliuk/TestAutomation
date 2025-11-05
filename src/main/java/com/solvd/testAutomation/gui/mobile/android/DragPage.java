@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 public class DragPage extends DragPageBase {
 
     @FindBy(xpath = "//android.widget.TextView[@text=\"Drag and Drop\"]")
-    ExtendedWebElement title;
+    private ExtendedWebElement title;
 
     public DragPage(WebDriver driver) {
         super(driver);
